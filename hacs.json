@@ -1,5 +1,7 @@
 {
-    "name": "Baby Dresser",
-    "render_readme": true,
-    "filename": "baby-dresser.js"
+  "name": "Baby Dresser",
+  "render_readme": true,
+  "filename": "baby-dresser.js",
+  "content_in_root": false,
+  "version": "1.0.0"
 }
