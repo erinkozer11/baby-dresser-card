@@ -136,7 +136,7 @@ export class BabyDresser extends LitElement {
     </span>
 
     <!-- Column 3: Sleepsack image -->
-    <span style="display: flex; justify-content: center; align-items: center;">
+    <span style="display: flex; justify-content: center; align-items: center; height: 45px; width: 45px;">
       ${sleepSackIcon}
     </span>
 
