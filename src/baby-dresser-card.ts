@@ -119,18 +119,20 @@ export class BabyDresser extends LitElement {
 
     <!-- Column 2: Wear images (spanning across both rows) -->
 <span style="display: flex; align-items: center; justify-content: center; grid-row: span 2; gap: 10px;">
-      <img 
-        src="${tempInfo.wear[0]}" 
+      <div 
         alt="Wear Image 1" 
         ?hidden="${!tempInfo.wear[0]}" 
         style="height: ${tempInfo.wear[1] ? '45px' : '60px'}; width: ${tempInfo.wear[1] ? '45px' : '60px'};" 
-      />
-      <img 
-        src="${tempInfo.wear[1]}" 
+      >
+        ${tempInfo.wear[0]}
+      </div>
+      <div
         alt="Wear Image 2" 
         ?hidden="${!tempInfo.wear[1]}" 
         style="height: 45px; width: 45px;" 
       />
+        ${tempInfo.wear[1]}
+      </div>
     </span>
 
     <!-- Column 3: Sleepsack image -->
