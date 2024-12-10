@@ -15,6 +15,7 @@ import type { BoilerplateCardConfig } from './types';
 import { actionHandler } from './action-handler-directive';
 import { CARD_VERSION } from './const';
 import { localize } from './localize/localize';
+import { getTemperatureInfo, TemperatureInfo } from './data';
 
 /* eslint no-console: 0 */
 console.info(
@@ -86,17 +87,76 @@ export class BoilerplateCard extends LitElement {
       return this._showError(localize('common.show_error'));
     }
 
+    const entityId = this.config?.entity;
+    console.log(entityId)
+    const state = parseFloat(this.hass?.states[entityId!].state);
+    console.log(state)
+
+      
+    const tempInfo = getTemperatureInfo(state);
+    console.log(tempInfo)
+
     return html`
-      <ha-card
-        .header=${this.config.name}
-        @action=${this._handleAction}
-        .actionHandler=${actionHandler({
-          hasHold: hasAction(this.config.hold_action),
-          hasDoubleClick: hasAction(this.config.double_tap_action),
-        })}
-        tabindex="0"
-        .label=${`Boilerplate: ${this.config.entity || 'No Entity Defined'}`}
-      ></ha-card>
+<ha-card
+    .header=${this.config.name}
+    @action=${this._handleAction}
+    .actionHandler=${actionHandler({
+        hasHold: hasAction(this.config.hold_action),
+        hasDoubleClick: hasAction(this.config.double_tap_action),
+    })}
+    tabindex="0"
+    .label=${`Boilerplate: ${this.config.entity || 'No Entity Defined'}`}
+    style="padding: 16px; height: 100%;"
+>
+  <!-- Flexbox for Card Content, excluding the header -->
+  <div style="display: flex; justify-content: center; align-items: center;">
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: auto auto; gap: 10px; text-align: center; max-width: 400px; width: 100%;">
+    
+    <!-- Row 1 -->
+    <!-- Column 1: Thermometer icon -->
+    <span style="display: flex; justify-content: center; align-items: center;">
+      <ha-icon icon="mdi:thermometer" style="--mdc-icon-size: 45px; width: 45px; height: 45px;"></ha-icon>
+    </span>
+
+    <!-- Column 2: Wear images (spanning across both rows) -->
+<span style="display: flex; align-items: center; justify-content: center; grid-row: span 2; gap: 10px;">
+      <img 
+        src="${tempInfo.wear[0]}" 
+        alt="Wear Image 1" 
+        ?hidden="${!tempInfo.wear[0]}" 
+        style="height: ${tempInfo.wear[1] ? '45px' : '60px'}; width: ${tempInfo.wear[1] ? '45px' : '60px'};" 
+      />
+      <img 
+        src="${tempInfo.wear[1]}" 
+        alt="Wear Image 2" 
+        ?hidden="${!tempInfo.wear[1]}" 
+        style="height: 45px; width: 45px;" 
+      />
+    </span>
+
+    <!-- Column 3: Sleepsack image -->
+    <span style="display: flex; justify-content: center; align-items: center;">
+      <img src="http://192.168.1.97:3000/icons/sleepsack.svg" height="40" width="40" />
+    </span>
+
+    <!-- Row 2 -->
+    <!-- Column 1: Current temperature with °C -->
+    <span style="display: flex; justify-content: center; align-items: center; font-size: 16px;">
+      ${state}°C
+    </span>
+
+    <!-- Column 2: Covered by the wear images (spanning both rows) -->
+    <!-- Column 3: TOG value + "TOG" -->
+    <span style="display: flex; justify-content: center; align-items: center; font-size: 16px;">
+      ${`${tempInfo.TOG} TOG`}
+    </span>
+
+  </div>
+</div>
+
+</ha-card>
+
+
     `;
   }
 
