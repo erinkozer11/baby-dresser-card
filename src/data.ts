@@ -1,12 +1,14 @@
+import { longSleeveIcon, sleevelessIcon } from './icons';
+
 // Enum for wear item to image URL mapping
-export enum WearImages {
-  "Long sleeve pyjamas" = "http://192.168.1.97:3000/icons/long-sleeve.svg",
-  "Sleeveless Bodysuit" = "http://192.168.1.97:3000/icons/sleeveless.svg",
+export const WearImages = {
+  "Long sleeve pyjamas": longSleeveIcon,
+  "Sleeveless Bodysuit": sleevelessIcon,
   // Add other items here as needed
 }
 
 // TemperatureInfo object with wear items mapped to image URLs
-export const TemperatureInfo: { [key: number]: { TOG: number, wear: string[] } } = {
+export const TemperatureInfo: { [key: number]: { TOG: number, wear: any[] } } = {
   15: {
     TOG: 3.5,
     wear: [

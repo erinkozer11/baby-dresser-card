@@ -16,6 +16,7 @@ import { actionHandler } from './action-handler-directive';
 import { CARD_VERSION } from './const';
 import { localize } from './localize/localize';
 import { getTemperatureInfo } from './data';
+import { sleepSackIcon} from './icons';
 
 /* eslint no-console: 0 */
 console.info(
@@ -134,7 +135,7 @@ export class BabyDresser extends LitElement {
 
     <!-- Column 3: Sleepsack image -->
     <span style="display: flex; justify-content: center; align-items: center;">
-      <img src="http://192.168.1.97:3000/icons/sleepsack.svg" height="40" width="40" />
+      ${sleepSackIcon}
     </span>
 
     <!-- Row 2 -->
