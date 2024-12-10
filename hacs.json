@@ -1,7 +1,7 @@
 {
-  "name": "Baby Dresser",
+  "name": "Baby Dresser Card",
   "render_readme": true,
-  "filename": "baby-dresser.js",
+  "filename": "baby-dresser-card.js",
   "content_in_root": false,
   "version": "1.0.0"
 }

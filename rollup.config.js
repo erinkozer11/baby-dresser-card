@@ -39,7 +39,7 @@ const plugins = [
 
 export default [
   {
-    input: 'src/baby-dresser.ts',
+    input: 'src/baby-dresser-card.ts',
     output: {
       dir: 'dist',
       format: 'es',

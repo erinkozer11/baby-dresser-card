@@ -10,8 +10,8 @@
     "lovelace",
     "custom-cards"
   ],
-  "module": "baby-dresser.js",
-  "repository": "git@github.com:erinkozer11/baby-wearing-hac.git",
+  "module": "baby-dresser-card.js",
+  "repository": "git@github.com:erinkozer11/baby-dresser-card.git",
   "author": "Erin",
   "license": "MIT",
   "dependencies": {
