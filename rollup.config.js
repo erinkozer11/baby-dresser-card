@@ -41,8 +41,9 @@ export default [
   {
     input: 'src/baby-dresser-card.ts',
     output: {
-      dir: 'dist',
+      file: 'dist/baby-dresser-card.js',
       format: 'es',
+      inlineDynamicImports: true,
     },
     plugins: [...plugins],
   },
