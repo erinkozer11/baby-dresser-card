@@ -2,7 +2,7 @@ import { LitElement, svg } from 'lit';
 
 export const longSleeveIcon = svg`<?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.879 511.879" width="35" height="35">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.879 511.879">
   <g>
     <path style="fill:#FFFFFF;" d="M217.312,370.637v101.517c0,21.937-17.788,39.724-39.724,39.724s-39.724-17.788-39.724-39.724V114.637L56.218,186c-12.818,11.917-33.033,10.478-44.041-3.116c-9.719-12.014-8.81-29.431,2.119-40.36L133.203,28.877c3.098-3.098,6.488-5.906,10.108-8.377c7.194-4.908,15.201-8.589,23.711-10.461C228.718-3.52,276.316-3.29,338.506,10.401c8.183,1.801,15.934,5.226,22.908,9.878l0,0c3.972,2.622,7.662,5.632,11.017,8.995L497.58,142.524c10.929,10.929,11.847,28.345,2.119,40.36c-11.008,13.594-31.223,15.033-44.041,3.116l-88.276-71.362v357.517c0,21.937-17.788,39.724-39.724,39.724s-39.724-17.788-39.724-39.724V370.637c0-19.5-15.81-35.31-35.31-35.31S217.312,351.137,217.312,370.637"/>
     <polygon style="fill:#FFFFFF;" points="287.933,185.261 332.071,185.261 332.071,132.295 287.933,132.295"/>
@@ -16,8 +16,7 @@ export const longSleeveIcon = svg`<?xml version="1.0" encoding="iso-8859-1"?>
 export const sleepSackIcon = svg`<?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
  "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000"
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.000000 512.000000"
  preserveAspectRatio="xMidYMid meet">
 
 <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
@@ -62,7 +61,7 @@ fill="#FFFFFF" stroke="none">
 export const sleevelessIcon = svg`<?xml version="1.0" encoding="utf-8"?>
 <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg fill="#FFFFFF" width="35" height="35" viewBox="0 0 1000 1000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  enable-background="new 0 0 1000 1000" xml:space="preserve">
+<svg fill="#FFFFFF" viewBox="0 0 1000 1000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  enable-background="new 0 0 1000 1000" xml:space="preserve">
 
 <g>
 
