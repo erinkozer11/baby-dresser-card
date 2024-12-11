@@ -113,7 +113,7 @@ export class BabyDresser extends LitElement {
     
     <!-- Row 1 -->
     <!-- Column 1: Thermometer icon -->
-    <span style="display: flex; justify-content: center; align-items: center;">
+    <span style="display: flex; justify-content: center; align-items: center; color: var(--orange-color)">
       <ha-icon icon="mdi:thermometer" style="--mdc-icon-size: 45px; width: 45px; height: 45px;"></ha-icon>
     </span>
 
@@ -137,7 +137,7 @@ export class BabyDresser extends LitElement {
 
     <!-- Column 3: Sleepsack image -->
     <span style="display: flex; justify-content: center; align-items: center;">
-      <div style="height: 45px; width: 45px;">
+      <div style="height: 45px; width: 45px; color: var(--light-blue-color);">
         ${sleepSackIcon}
       </div>
     </span>
