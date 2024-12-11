@@ -49,11 +49,15 @@ export const TemperatureInfo: { [key: number]: { TOG: number, wear: any[] } } = 
 };
 
 
-// Function to get the temperature info based on a given temperature (rounding to nearest key)
-export function getTemperatureInfo(temperature: number): { TOG: number; wear: string[] } {
-  // Round to nearest integer
-  const roundedTemp = Math.round(temperature);
-  
-  // Access TemperatureInfo using the rounded value
-  return TemperatureInfo[roundedTemp];
+export function getTemperatureInfo(temperature: number): { TOG: number; wear: any[] } {
+  // Get all the keys from TemperatureInfo and convert them to numbers
+  const keys = Object.keys(TemperatureInfo).map(Number);
+
+  // Find the closest key to the given temperature
+  const closestKey = keys.reduce((prev, curr) =>
+    Math.abs(curr - temperature) < Math.abs(prev - temperature) ? curr : prev
+  );
+
+  // Return the corresponding TemperatureInfo for the closest key
+  return TemperatureInfo[closestKey];
 }
